@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=uyBCzC7TIZg&t
+Параллакс эффект при движении мыши и скролле сайта. Без библиотек и дополнений. HTML CSS JavaScript.

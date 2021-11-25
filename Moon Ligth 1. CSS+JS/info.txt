@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=TawH-AqHTXc&t=14s
+Простой эффект прокрутки параллакса с помощью CSS и ванильного JavaScript
