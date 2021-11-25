@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+body {
+  background-color: #0a2a43;
+  min-height: 1500px;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* заполнитель(размывка) м/у img и текстом */
+section::before {
+  content: '';
+  position: absolute;
+  /* с низу */
+  bottom: 0;
+  width: 100%;
+  /* высота */
+  height: 100px;
+  /* height: 200px; */
+  /* height: 300px; */
+  /* градиет от верха до #0a2a43 до прозрачн низа  */
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 3;
+  /* ! альтернатива от фриПоЖизн пока не раб */
+  /* top: 0;left: 0;
+  transform: translate(0px, -100%); */
+}
+/* заполнитель цветом(наложение) */
+section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a2a43;
+  z-index: 3;
+  /* режим наложения(смешивания) исход. цвета на фон. цвет/изобр. */
+  /* не отлич от ориг `оттенок`,`осветлить` */
+  mix-blend-mode: hue;
+  mix-blend-mode: lighten;
+  /* под тон background-color */
+  mix-blend-mode: color;
+  /* темный `умножать` */
+  mix-blend-mode: multiply;
+  /* темно яркий`накладка` */
+  mix-blend-mode: overlay;
+  /* тип старина `разницы` */
+  mix-blend-mode: difference;
+  /* светлый `уклонять`*/
+  mix-blend-mode: color-dodge;
+}
+section img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+#text {
+  position: relative;
+  color: #fff;
+  font-size: 10em;
+  z-index: 1;
+}
+#road {
+  z-index: 2;
+}
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.content p {
+  margin: 10px 10px;
+  padding: 5px;
+  font-size: 20px;
+  color: #c7c758;
+}
